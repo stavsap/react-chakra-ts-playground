@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./styles.css";
+import { BsBarChart } from "react-icons/bs";
+import { BiMap, BiChalkboard } from "react-icons/bi";
+import { FiSettings } from "react-icons/fi";
+import { Outlet } from "react-router-dom";
+import {
+  SidenavProvider,
+  SidenavContainer,
+  SidenavItem,
+  Sidenav
+} from "./components/sidenav";
+import { Navbar } from "./components/navbar/navbar";
 
-function App() {
+export default function App() {
+  const navItems: SidenavItem[] = [
+    { icon: BsBarChart, label: "Dashboard", to: "" },
+    { icon: BiChalkboard, label: "Forecast", to: "forecast" },
+    { icon: BiMap, label: "Location", to: "location" },
+    { icon: FiSettings, label: "Settings", to: "settings" }
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <SidenavProvider>
+        <SidenavContainer sidenav={<Sidenav navItems={navItems} />}>
+          <Navbar />
+          <main>
+            <div className="App">
+              <Outlet />
+            </div>
+          </main>
+        </SidenavContainer>
+      </SidenavProvider>
   );
 }
-
-export default App;

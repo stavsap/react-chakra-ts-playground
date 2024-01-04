@@ -67,3 +67,13 @@ npm i -s react-router-dom
 ```shell
 npm i -s react-icons
 ```
+
+## Recharts
+
+React Charts lib
+
+https://recharts.org/
+
+```shell
+npm i -s recharts
+```

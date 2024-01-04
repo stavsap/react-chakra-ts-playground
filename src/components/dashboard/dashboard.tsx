@@ -14,6 +14,9 @@ import {
 } from '@chakra-ui/react';
 
 
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+
+
 
 const Dashboard = () => {
     return (
@@ -33,7 +36,7 @@ const Dashboard = () => {
                 <Box flex="1">
                     <Card maxW='sm'>
                         <CardBody>
-                            Body
+                            asdasdas
                         </CardBody>
                         <Divider />
                         <CardFooter>

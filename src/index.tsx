@@ -5,6 +5,7 @@ import {RouterProvider, createBrowserRouter, Navigate} from "react-router-dom";
 import App from "./App";
 import Dashboard from "./components/dashboard/dashboard";
 import Auth from "./components/auth/auth";
+import {DataProvider} from "./providers/DataProvider";
 
 const rootElement = document.getElementById("root")!;
 const root = ReactDOM.createRoot(rootElement);
@@ -31,8 +32,10 @@ const routes = createBrowserRouter([
 
 root.render(
     <React.StrictMode>
-        <ChakraProvider>
-            <RouterProvider router={routes} />
-        </ChakraProvider>
+        <DataProvider>
+            <ChakraProvider>
+                <RouterProvider router={routes} />
+            </ChakraProvider>
+        </DataProvider>
     </React.StrictMode>
 );

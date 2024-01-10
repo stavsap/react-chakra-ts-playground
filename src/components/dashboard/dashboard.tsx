@@ -7,12 +7,14 @@ import {
 } from '@chakra-ui/react';
 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import {useData} from "../../providers/DataProvider";
 
 
 
 const Dashboard = () => {
+    const {data, fetchData} = useData();
 
-    const data = [
+    const statistics = [
         {
             name: 'Jan',
             uv: 4000,
@@ -64,7 +66,7 @@ const Dashboard = () => {
                     <Card style={{ height: "20rem", width: "100%", padding:"10px" }}>
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart
-                                data={data}
+                                data={statistics}
                                 margin={{
                                     top: 5,
                                     right: 30,
@@ -88,7 +90,7 @@ const Dashboard = () => {
                     <Card style={{ height: "20rem", width: "100%", padding:"10px" }}>
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart
-                                data={data}
+                                data={statistics}
                                 margin={{
                                     top: 5,
                                     right: 30,
@@ -113,7 +115,7 @@ const Dashboard = () => {
                     <Card style={{ height: "20rem", width: "100%", padding:"10px" }}>
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart
-                                data={data}
+                                data={statistics}
                                 margin={{
                                     top: 5,
                                     right: 30,
@@ -137,7 +139,7 @@ const Dashboard = () => {
                     <Card style={{ height: "20rem", width: "100%", padding:"10px" }}>
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart
-                                data={data}
+                                data={statistics}
                                 margin={{
                                     top: 5,
                                     right: 30,
@@ -163,7 +165,7 @@ const Dashboard = () => {
                     <Card style={{ height: "20rem", width: "100%", padding:"10px" }}>
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart
-                                data={data}
+                                data={statistics}
                                 margin={{
                                     top: 5,
                                     right: 30,
@@ -187,7 +189,7 @@ const Dashboard = () => {
                     <Card style={{ height: "20rem", width: "100%", padding:"10px" }}>
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart
-                                data={data}
+                                data={statistics}
                                 margin={{
                                     top: 5,
                                     right: 30,
